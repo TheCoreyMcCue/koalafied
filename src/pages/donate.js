@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const donate = () => {
   return (
-    <div>
+    <Layout>
       give us money
-    </div>
+    </Layout>
   )
 }
 

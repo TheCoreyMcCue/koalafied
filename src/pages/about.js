@@ -5,7 +5,7 @@ const about = () => {
   return (
     <Layout>
       <h2>
-      about page
+        about page
       </h2>
     </Layout>
 
