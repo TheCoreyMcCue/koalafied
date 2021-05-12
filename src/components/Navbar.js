@@ -36,13 +36,12 @@ const Navbar = () => {
             onClick={() => setShow(false)}>
             about
           </Link>
-          <div className="nav-link contact-link">
-            <Link to="/contact"
-              className="btn"
-              onClick={() => setShow(false)}>
-              contact
-            </Link>
-          </div>
+          <Link to="/contact"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}>
+            contact
+          </Link>
         </div>
       </div>
     </nav>
