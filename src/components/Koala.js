@@ -12,6 +12,16 @@ const Koala = () => {
   const [showRight, setShowRight] = useState(false)
   const [clickRight, setClickRight] = useState(false)
   const [clickLeft, setClickLeft] = useState(false)
+
+  const rightSideClick = () => {
+    setClickLeft(false)
+    setClickRight(true)
+  }
+  const leftSideClick = () => {
+    setClickLeft(true)
+    setClickRight(false)
+  }
+
   return (
     <main className="page">
       <header className="hero">
@@ -22,16 +32,14 @@ const Koala = () => {
         <div className="hero-container">
           <div className="arrow-left hidden"
             onMouseOver={() => setShow(true)}
-            onMouseOut={() => setShow(false)}>
+            onMouseOut={() => setShow(false)}
+            onClick={() => leftSideClick()}>
             <p>hidden message</p>
           </div>
           {show && (
-            <button className="arrow-left"
-              // onClick={() => setClickLeft(true)}
-            >
-              <AiOutlineArrowLeft
+            <AiOutlineArrowLeft
+              className="arrow-left"
               />
-            </button>
           )}       
           <div className="hero-text">
             <h1 className="hero-text">Koalafied</h1>
@@ -39,16 +47,15 @@ const Koala = () => {
           </div>
           <div className="arrow-right hidden"
             onMouseOver={() => setShowRight(true)}
-            onMouseOut={() => setShowRight(false)}>
+            onMouseOut={() => setShowRight(false)}
+            onClick={() => rightSideClick()}
+          >
             <p>hidden message</p>
           </div>
           {showRight && (
-            <button className="arrow-right"
-              // onClick={() => setClickRight(true), console.log(clickRight)}
-            >
-              <AiOutlineArrowRight
-              />
-            </button>
+            <AiOutlineArrowRight
+              className="arrow-right"
+            />
           )} 
         </div>
       </header>
