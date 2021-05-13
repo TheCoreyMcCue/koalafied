@@ -11,7 +11,7 @@ const Koala = () => {
   const [show, setShow] = useState(false)
   const [showRight, setShowRight] = useState(false)
   const [clickRight, setClickRight] = useState(false)
-  const [clickLeft, setClickLeft] = useState(false)
+  const [clickLeft, setClickLeft] = useState(true)
 
   const rightSideClick = () => {
     setClickLeft(false)
@@ -62,7 +62,7 @@ const Koala = () => {
       <div className="hero-links">
         <Link href="/donate"
           onMouseOver={() => setLightMode(true)}>
-          <div className={clickLeft ? "card mx-2 click-right" : "card mx-2"}>
+          <div className={clickLeft ? "card mx-2 click-right" : "card mx-2 left-click-right"}>
             <div className="card-body">
               <h5 className="card-title text-center">One Time Donation</h5>
               <h6 className="card-subtitle mb-2 text-muted text-center">$100 (one time donation)</h6>
@@ -72,7 +72,7 @@ const Koala = () => {
         </Link>
         <Link href="/donate"
           onMouseOver={() => setLightMode(false)}>
-          <div className={clickRight ? "card mx-2 click-right" : "card mx-2"}>
+          <div className={clickRight ? "card mx-2 click-right" : "card mx-2 left-click-right"}>
             <div className="card-body">
               <h5 className="card-title text-center">Become a member</h5>
               <h6 className="card-subtitle mb-2 text-muted text-center">$50/month (reoccuring)</h6>
