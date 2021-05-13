@@ -571,8 +571,11 @@ form > *:last-child {
 .card:hover {
   text-decoration: underline;
 }
-.click-right {
-  text-decoration: underline;
+.left-click-right {
+  opacity: 0.2;
+}
+.right-side-default {
+  opacity: 0.2;
 }
 
 .arrow-left {
