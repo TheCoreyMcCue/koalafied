@@ -579,13 +579,13 @@ form > *:last-child {
   color: white;
   position: absolute;
   left: 10px;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .arrow-right {
   color: white;
   position: absolute;
   right: 10px;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
