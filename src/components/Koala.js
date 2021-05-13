@@ -16,10 +16,12 @@ const Koala = () => {
   const rightSideClick = () => {
     setClickLeft(false)
     setClickRight(true)
+    setLightMode(false)
   }
   const leftSideClick = () => {
     setClickLeft(true)
     setClickRight(false)
+    setLightMode(true)
   }
 
   return (
@@ -30,11 +32,11 @@ const Koala = () => {
           className="hero-img blur"
           alt="koala looking at buttons" />
         <div className="hero-container">
-          <div className="arrow-left hidden"
+          <div className="arrow-left hidden hidden-left"
             onMouseOver={() => setShow(true)}
             onMouseOut={() => setShow(false)}
-            onClick={() => leftSideClick()}>
-            <p>hidden message</p>
+            onClick={() => leftSideClick()}
+          >                                 
           </div>
           {show && (
             <AiOutlineArrowLeft
@@ -43,14 +45,13 @@ const Koala = () => {
           )}       
           <div className="hero-text">
             <h1 className="hero-text">Koalafied</h1>
-            <h4>Where koalas are our business</h4>
+            <h4>koala conservation is our business</h4>
           </div>
-          <div className="arrow-right hidden"
+          <div className="arrow-right hidden hidden-right"
             onMouseOver={() => setShowRight(true)}
             onMouseOut={() => setShowRight(false)}
             onClick={() => rightSideClick()}
           >
-            <p>hidden message</p>
           </div>
           {showRight && (
             <AiOutlineArrowRight
@@ -62,7 +63,7 @@ const Koala = () => {
       <div className="hero-links">
         <Link href="/donate"
           onMouseOver={() => setLightMode(true)}>
-          <div className={clickLeft ? "card mx-2 click-right" : "card mx-2 left-click-right"}>
+          <div className={clickLeft ? "card mx-2 click-right koala-card" : "koala-card card mx-2 left-click-right"}>
             <div className="card-body">
               <h5 className="card-title text-center">One Time Donation</h5>
               <h6 className="card-subtitle mb-2 text-muted text-center">$100 (one time donation)</h6>
@@ -72,7 +73,7 @@ const Koala = () => {
         </Link>
         <Link href="/donate"
           onMouseOver={() => setLightMode(false)}>
-          <div className={clickRight ? "card mx-2 click-right" : "card mx-2 left-click-right"}>
+          <div className={clickRight ? "card mx-2 click-right koala-card" : "card mx-2 left-click-right koala-card"}>
             <div className="card-body">
               <h5 className="card-title text-center">Become a member</h5>
               <h6 className="card-subtitle mb-2 text-muted text-center">$50/month (reoccuring)</h6>
