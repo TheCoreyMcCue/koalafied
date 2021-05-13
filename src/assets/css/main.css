@@ -524,7 +524,7 @@ form > *:last-child {
   height: 100%;
   border-radius: var(--borderRadius);
   width: 100%;
-  image-rendering: auto;
+  image-rendering: pixelated;
 }
 .blur {
   opacity: 0.8;
@@ -558,8 +558,18 @@ form > *:last-child {
 }
 
 .hidden {
-  opacity: 0;
-  height: 300px;
+  opacity: 0.7;
+  height: 100%;
+  width: 50%;
+  padding: 50px;
+}
+.hidden-left:hover {
+  border-bottom: 7px inset #7c8854;
+  transition: border-bottom 0.2s ease-in-out;
+}
+.hidden-right:hover {
+  border-bottom: 7px inset #7c8854;
+  transition: border-bottom 0.2s ease-in-out;
 }
 
 .card {
@@ -568,14 +578,26 @@ form > *:last-child {
 .card-title {
   font-weight: bold;
 }
-.card:hover {
+.koala-card:hover {
   text-decoration: underline;
+  box-shadow: 2px 1px 1px grey;
+  transition: box-shadow 0.3s ease-in-out;
 }
+
+.card-img-top {
+  height: 50vh;
+  width: auto;
+}
+
 .left-click-right {
   opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-out;
 }
 .right-side-default {
   opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .arrow-left {
