@@ -339,6 +339,7 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .nav-center {
   width: 90vw;
@@ -522,11 +523,22 @@ form > *:last-child {
 .hero-img {
   height: 100%;
   border-radius: var(--borderRadius);
+  width: 100%;
+  image-rendering: auto;
 }
+.blur {
+  opacity: 0.8;
+}
+
 .hero {
   height: 40vh;
   position: relative;
   margin-bottom: 2rem;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: space-between;
 }
 .hero-container {
   position: absolute;
@@ -537,12 +549,43 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: var(--borderRadius);
 }
 .hero-text {
   color: var(--white);
   text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  height: 300px;
+}
+
+.card {
+  color: var(--primary-500)
+}
+.card-title {
+  font-weight: bold;
+}
+.card:hover {
+  text-decoration: underline;
+}
+.click-right {
+  text-decoration: underline;
+}
+
+.arrow-left {
+  color: white;
+  position: absolute;
+  left: 10px;
+  font-size: 2rem;
+}
+.arrow-right {
+  color: white;
+  position: absolute;
+  right: 10px;
+  font-size: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
